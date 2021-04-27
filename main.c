@@ -5,15 +5,6 @@
 #include "tomcrypt.h"
 #include "monocypher.h"
 
-// Loup Valiant is hero
-void print_vector(const uint8_t *buf, size_t size)
-{
-    for(size_t i = 0; i < size; i++) {
-        printf("%x%x", buf[i] >> 4, buf[i] & 0x0f);
-    }
-    printf(":\n");
-}
-
 int main(void) {
    uint8_t d[128], out1[64], out2[64];
 	int result = 0;
